@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 38 part 2, learning setInterval</title>
+</head>
+<body>
+    <h1>2 Projects with async</h1>
+    <button id='stop'>stop</button>
+    <button id='start'>start</button>
+</body>
+<script>
+    let starting;
+    let intervalID;
+    document.getElementById('start').addEventListener('click', function(){
+            starting = function(){
+            console.log("Yash", Date.now());
+        }
+        intervalID = setInterval(starting, 2000)
+    })
+    
+    
+    document.getElementById('stop').addEventListener('click', function(){
+        clearInterval(intervalID)
+    })
+    
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 38 </title>
+</head>
+<body>
+    <h1>2 Projects with async</h1>
+    <button id='stop'>stop</button>
+</body>
+<script>
+    setTimeout(function(){
+        console.log("Yash");
+    }, 2000)
+
+    const changeName = function(){
+        document.querySelector('h1').innerHTML = "Changing name using timeout"
+    }
+    const changeMe = setTimeout(changeName, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(e){
+        clearTimeout(changeMe)
+    })
+</script>
+</html>
