@@ -1,0 +1,26 @@
+ <!-- LECTURE 46 -->
+
+
+<!-- 
+ const user = {
+    name: "Yash",
+    greet() {
+      console.log(`Hello, ${this.name}`);
+    }
+  };
+  
+  setTimeout(user.greet, 1000);
+   -->
+<!-- 
+   this is without bind -->
+
+   const user = {
+    name: "Yash",
+    greet() {
+      console.log(`Hello, ${this.name}`);
+    }
+  };
+  
+  setTimeout(user.greet.bind(user), 1000);
+
+  <!-- so what my bind did is creates a new function which assings this permanently to object -->
